@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Charan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 09:58:36 AM"/>
+        <attribute name="created" value="Q2hhcmFuO1BSRURBVE9SOzIwMjItMTAtMjg7MDk6MDk6NDggQU07MjQ3NA=="/>
+        <attribute name="edited" value="Q2hhcmFuO1BSRURBVE9SOzIwMjItMTAtMjg7MDk6NTg6MzYgQU07MjsyNTg0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="RN" type="String" array="False" size=""/>
+            <output expression="&quot;Enter your Roll number&quot;" newline="True"/>
+            <input variable="RN"/>
+            <declare name="Name" type="String" array="False" size=""/>
+            <output expression="&quot;Enter your Name&quot;" newline="True"/>
+            <input variable="Name"/>
+            <declare name="Address" type="String" array="False" size=""/>
+            <output expression="&quot;Enter your Address&quot;" newline="True"/>
+            <input variable="Address"/>
+            <declare name="BG" type="String" array="False" size=""/>
+            <output expression="&quot;Enter your Blood Group&quot;" newline="True"/>
+            <input variable="BG"/>
+            <declare name="PN" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter your Ph No&quot;" newline="True"/>
+            <input variable="PN"/>
+            <declare name="DEPT" type="String" array="False" size=""/>
+            <output expression="&quot;Enter the Assigned Department&quot;" newline="True"/>
+            <input variable="DEPT"/>
+            <output expression="&quot;Your Details are:&quot;&amp;RN &amp;Name &amp;Address &amp;BG &amp;PN &amp;DEPT" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>
