@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22018"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:41:35 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxODsyMDIyMjNNQVlDMDA1NTsyMDIyLTExLTA0OzEwOjIwOjU5IEFNOzMwNTg="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxODsyMDIyMjNNQVlDMDA1NTsyMDIyLTExLTA0OzEwOjQxOjM1IEFNOzI7MzE2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Aim, swapping the values of two integers&#13;&#10;"/>
+            <declare name="a, b" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the first number (a): &quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Enter the second number (b): &quot;" newline="True"/>
+            <input variable="b"/>
+            <assign variable="a" expression="a+b"/>
+            <assign variable="b" expression="a-b"/>
+            <assign variable="a" expression="a-b"/>
+            <output expression="&quot;After swapping, a is &quot; &amp; a &amp; &quot; and b is &quot; &amp; b" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

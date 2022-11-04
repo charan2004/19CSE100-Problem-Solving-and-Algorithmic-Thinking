@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22018"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:46:25 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxODsyMDIyMjNNQVlDMDA1NTsyMDIyLTExLTA0OzA5OjM2OjI4IEFNOzMwNjk="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxODsyMDIyMjNNQVlDMDA1NTsyMDIyLTExLTA0OzEwOjQ2OjI1IEFNOzQ7MzE3MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Enter the coefficients of the quadratic equation&quot; &amp;&#13;&#10;&quot; NOTE: Make sure the values does not creates imaginary roots &quot;" newline="True"/>
+            <comment text="Entering the Coefficents of the quadratic equation"/>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the value for a:&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Enter the value for b: &quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;Enter the value for c: &quot;" newline="True"/>
+            <input variable="c"/>
+            <declare name="x1" type="Real" array="False" size=""/>
+            <comment text="Finding the first root"/>
+            <assign variable="x1" expression="(-b+sqrt(b^2-4*a*c))/2*a"/>
+            <declare name="x2" type="Real" array="False" size=""/>
+            <comment text="Finding the second root"/>
+            <assign variable="x2" expression="(-b-sqrt(b^2-4*a*c))/2*a"/>
+            <comment text="Printing the quadratic equation&#13;&#10;"/>
+            <output expression="&quot;The quadratic equation using the given coefficents is: &quot; &amp; &quot;(&quot; &amp; a &amp; &quot;)&quot; &amp;&quot;x^2 +&quot; &amp; &quot;(&quot; &amp; b &amp; &quot;)&quot; &amp; &quot;x +&quot; &amp; &quot;(&quot; &amp;c &amp; &quot;)&quot;" newline="True"/>
+            <comment text="Printing the roots"/>
+            <output expression="&quot;The Roots of the equation are: &quot; &amp; &quot;(&quot; &amp; x1 &amp; &quot;,&quot; &amp; x2 &amp; &quot;)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

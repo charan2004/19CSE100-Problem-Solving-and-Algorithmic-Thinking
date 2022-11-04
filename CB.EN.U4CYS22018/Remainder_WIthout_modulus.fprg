@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22018"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:53:40 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxODsyMDIyMjNNQVlDMDA1NTsyMDIyLTExLTA0OzEwOjMxOjM5IEFNOzMwNTg="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxODsyMDIyMjNNQVlDMDA1NTsyMDIyLTExLTA0OzEwOjUzOjQwIEFNOzI7MzE2Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Aim : To get the remainder without the modulus operator&#13;&#10;"/>
+            <declare name="Divisor, Dividend, Quotient, Remainder" type="Integer" array="False" size=""/>
+            <comment text="We're getting the values of dividend and divisor&#13;&#10;"/>
+            <output expression="&quot;Enter the value of Dividend: &quot;" newline="True"/>
+            <input variable="Dividend"/>
+            <output expression="&quot;Enter the value of Divisor: &quot;" newline="True"/>
+            <input variable="Divisor"/>
+            <comment text="now, assigning the values of quotient and remainder&#13;&#10;"/>
+            <assign variable="Quotient" expression="Dividend/Divisor"/>
+            <assign variable="Remainder" expression="Dividend-(Divisor*Quotient)"/>
+            <comment text="Printing the remainder"/>
+            <output expression="&quot;The Remainder is: &quot; &amp; Remainder" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

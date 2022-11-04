@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22018"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 09:36:14 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxODsyMDIyMjNNQVlDMDA1NTsyMDIyLTExLTA0OzA5OjI3OjM2IEFNOzMwNjg="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxODsyMDIyMjNNQVlDMDA1NTsyMDIyLTExLTA0OzA5OjM2OjE0IEFNOzI7MzE3Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="AIM: To convert the temperature from Farenheit scale to Celsius scale"/>
+            <declare name="F" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the Farenheit Value: &quot;" newline="True"/>
+            <input variable="F"/>
+            <declare name="C" type="Integer" array="False" size=""/>
+            <comment text="After declaring the variables and its values, we are now converting the farenheit to celsius scale"/>
+            <assign variable="C" expression="(F-32)*5/9"/>
+            <comment text="Printing the celsisus value &#13;&#10;"/>
+            <output expression="&quot;The corresponding Celsius Value is: &quot; &amp;C" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
