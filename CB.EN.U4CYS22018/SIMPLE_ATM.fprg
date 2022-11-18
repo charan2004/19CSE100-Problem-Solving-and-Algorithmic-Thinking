@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Charan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 10:33:41 AM"/>
+        <attribute name="created" value="Q2hhcmFuO1BSRURBVE9SOzIwMjItMTEtMTg7MDk6MDg6MDggQU07MjQ2OQ=="/>
+        <attribute name="edited" value="Q2hhcmFuO1BSRURBVE9SOzIwMjItMTEtMTg7MTA6MzM6NDEgQU07MzsyNTY2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="accountno" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter your account number: &quot;" newline="True"/>
+            <input variable="accountno"/>
+            <declare name="NAME" type="String" array="False" size=""/>
+            <output expression="&quot;Enter the account holder name: &quot;" newline="True"/>
+            <input variable="NAME"/>
+            <declare name="bankname" type="String" array="False" size=""/>
+            <output expression="&quot;Enter your bank name with the branch name: &quot;" newline="True"/>
+            <input variable="bankname"/>
+            <declare name="IFSC" type="String" array="False" size=""/>
+            <output expression="&quot;Enter your bank IFSC Code: &quot;" newline="True"/>
+            <input variable="IFSC"/>
+            <declare name="BAL" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter your Bank Balance: &quot;" newline="True"/>
+            <input variable="BAL"/>
+            <declare name="withdraw" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the amount to be withdrawn: &quot;" newline="True"/>
+            <input variable="withdraw"/>
+            <if expression="BAL&gt;500">
+                <then>
+                    <if expression="withdraw &lt; 15000">
+                        <then/>
+                        <else>
+                            <output expression="&quot;The withdrawal amount is higher then the daily limit.&quot;&#13;&#10;&amp;&quot;Your daily limit: 15000&quot;" newline="True"/>
+                        </else>
+                    </if>
+                    <declare name="PIN" type="Integer" array="False" size=""/>
+                    <output expression="&quot;Enter your 4-digit Pin to withdraw&quot;" newline="True"/>
+                    <input variable="PIN"/>
+                    <if expression="PIN=0000">
+                        <then>
+                            <output expression="&quot;Entered 4-digit Pin is correct, please collect the cash&quot;" newline="True"/>
+                            <declare name="REMBAL" type="Integer" array="False" size=""/>
+                            <assign variable="REMBAL" expression="BAL-withdraw"/>
+                            <if expression="REMBAL&lt;500">
+                                <then>
+                                    <output expression="&quot;Your bank balance is lower than the minimum amount, you'll be penalised Rs. 20/day, please add money to yout bank for transaction in future. &quot;" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                            <declare name="transcript" type="Boolean" array="False" size=""/>
+                            <output expression="&quot;If you want the transcript to be printed, Enter true/false: &quot;" newline="True"/>
+                            <input variable="transcript"/>
+                            <if expression="transcript">
+                                <then>
+                                    <output expression="&quot;Your account details: &quot; &#13;&#10;&amp; &quot;Account number: xxxxx &quot; &#13;&#10;&amp; &quot;Branch: &quot; &amp; bankname &#13;&#10;&amp; &quot;IFSC code: &quot; &amp; IFSC &#13;&#10;&amp; &quot;Balance: &quot;  &amp; BAL" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Wrong pin, please start over: &quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Your Balance is lower than the minimum balance, please add some money before withdrawing! &quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;THANK YOU&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
