@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Charan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:36:23 AM"/>
+        <attribute name="created" value="Q2hhcmFuO1BSRURBVE9SOzIwMjItMTItMDI7MDk6NTg6MDggQU07MjQ2OA=="/>
+        <attribute name="edited" value="Q2hhcmFuO1BSRURBVE9SOzIwMjItMTItMDI7MTA6MzY6MjMgQU07MTsyNTYx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, g, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter till which you want to find fibonacci series: &quot;" newline="True"/>
+            <input variable="a"/>
+            <assign variable="c" expression="0"/>
+            <assign variable="g" expression="1"/>
+            <output expression="&quot;Fibonacci series is &quot;" newline="True"/>
+            <for variable="i" start="0" end="a" direction="inc" step="1">
+                <assign variable="b" expression="g+c"/>
+                <assign variable="g" expression="c"/>
+                <assign variable="c" expression="b"/>
+                <output expression="b &amp; &quot; &quot;" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

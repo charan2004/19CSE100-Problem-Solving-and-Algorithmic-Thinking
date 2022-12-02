@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Charan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:26:16 AM"/>
+        <attribute name="created" value="Q2hhcmFuO1BSRURBVE9SOzIwMjItMTItMDI7MDk6MjE6MDQgQU07MjQ1NA=="/>
+        <attribute name="edited" value="Q2hhcmFuO1BSRURBVE9SOzIwMjItMTItMDI7MDk6MjY6MTYgQU07MTsyNTcw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number for which you want to find the factorial for.&quot;" newline="True"/>
+            <input variable="a"/>
+            <assign variable="b" expression="1"/>
+            <for variable="n" start="1" end="a" direction="inc" step="1">
+                <assign variable="b" expression="b*n"/>
+            </for>
+            <output expression="&quot;The factorial is &quot; &amp;b" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
