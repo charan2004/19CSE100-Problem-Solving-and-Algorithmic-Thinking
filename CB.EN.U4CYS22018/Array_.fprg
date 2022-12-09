@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Charan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 04:41:03 PM"/>
+        <attribute name="created" value="Q2hhcmFuO1BSRURBVE9SOzIwMjItMTItMDk7MDQ6NDA6MzEgUE07MjQ3Mg=="/>
+        <attribute name="edited" value="Q2hhcmFuO1BSRURBVE9SOzIwMjItMTItMDk7MDQ6NDA6MzYgUE07MTtNaWRocnUgSmF5YW4uSztMQVBUT1AtUkQ0NEhGTFU7MjAyMi0xMi0wOTswOToxMTozNiBBTTtBUlJBWS5mcHJnOzcxNjU="/>
+        <attribute name="edited" value="Q2hhcmFuO1BSRURBVE9SOzIwMjItMTItMDk7MDQ6NDE6MDMgUE07MTsyNTgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Integer" array="True" size="10"/>
+            <declare name="y, z" type="Integer" array="False" size=""/>
+            <for variable="y" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;enter the value &quot;&amp;y&amp;&quot;of the array&quot;" newline="True"/>
+                <input variable="z"/>
+                <assign variable="x[y]" expression="z"/>
+            </for>
+            <for variable="y" start="0" end="9" direction="inc" step="1">
+                <output expression="x[y]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

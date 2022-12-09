@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Charan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 04:43:21 PM"/>
+        <attribute name="created" value="Q2hhcmFuO1BSRURBVE9SOzIwMjItMTItMDk7MDQ6NDM6MDUgUE07MjQ3Ng=="/>
+        <attribute name="edited" value="Q2hhcmFuO1BSRURBVE9SOzIwMjItMTItMDk7MDQ6NDM6MDkgUE07MTtkZWVwYWs7REVFUEFLS1VNQVI7MjAyMi0xMi0wOTswOTo1NDo1NCBBTTtMYXJnZXN0X0VsZW1lbnRfQXJyYXkuZnByZzs4MDIy"/>
+        <attribute name="edited" value="Q2hhcmFuO1BSRURBVE9SOzIwMjItMTItMDk7MDQ6NDM6MjEgUE07MTsyNTgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Real" array="True" size="10"/>
+            <declare name="y, z, v" type="Integer" array="False" size=""/>
+            <comment text="Declaring the variables&#13;&#10;"/>
+            <for variable="y" start="0" end="9" direction="inc" step="1">
+                <comment text="in the loop getting the numbers "/>
+                <output expression="&quot;Enter the number in index &quot;&amp;y&amp;&quot; :&quot;" newline="True"/>
+                <input variable="z"/>
+                <assign variable="x[y]" expression="z"/>
+            </for>
+            <assign variable="v" expression="0"/>
+            <for variable="y" start="0" end="9" direction="inc" step="1">
+                <comment text="using if statement within for loop to find v is less than x[y] or not"/>
+                <if expression="v&lt;x[y]">
+                    <then>
+                        <assign variable="v" expression="x[y]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="v" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
