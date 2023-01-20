@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22018"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:54:03 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxODsyMDIyMjNNQVlDMDA1ODsyMDIzLTAxLTIwOzA5OjA1OjIwIEFNOzMwNTg="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxODsyMDIyMjNNQVlDMDA1ODsyMDIzLTAxLTIwOzEwOjU0OjAzIEFNOzU7MzE2Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, j, b, min, max" type="Integer" array="False" size=""/>
+            <declare name="a" type="Integer" array="True" size="5"/>
+            <output expression="&quot;Enter the 5 numbers to be sorted&quot;" newline="True"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <comment text="getting the values of array"/>
+            <declare name="m" type="String" array="False" size=""/>
+            <output expression="&quot;If you want to sort it in ascending order, input as, else in the descending order, input ds&quot;" newline="True"/>
+            <input variable="m"/>
+            <comment text="asking if the user wants to arrange it in asc or dsc order&#13;&#10;"/>
+            <if expression="m = &quot;as&quot;">
+                <then>
+                    <comment text="ascending order"/>
+                    <for variable="i" start="0" end="3" direction="inc" step="1">
+                        <assign variable="min" expression="i"/>
+                        <for variable="j" start="i+1" end="4" direction="inc" step="1">
+                            <if expression="a[j]&lt;a[min]">
+                                <then>
+                                    <assign variable="min" expression="j"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                        <assign variable="b" expression="a[i]"/>
+                        <assign variable="a[i]" expression="a[min]"/>
+                        <assign variable="a[min]" expression="b"/>
+                    </for>
+                </then>
+                <else>
+                    <comment text="descending order&#13;&#10;"/>
+                    <for variable="i" start="0" end="3" direction="inc" step="1">
+                        <assign variable="max" expression="i"/>
+                        <for variable="j" start="i+1" end="4" direction="inc" step="1">
+                            <if expression="a[j]&gt;a[max]">
+                                <then>
+                                    <assign variable="max" expression="j"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                        <assign variable="b" expression="a[i]"/>
+                        <assign variable="a[i]" expression="a[max]"/>
+                        <assign variable="a[max]" expression="b"/>
+                    </for>
+                </else>
+            </if>
+            <output expression="&quot;The sorted numbers are: &quot;" newline="True"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="a[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

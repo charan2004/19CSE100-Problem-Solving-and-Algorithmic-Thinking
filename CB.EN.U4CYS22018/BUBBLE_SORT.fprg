@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22018"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:57:04 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxODsyMDIyMjNNQVlDMDA1ODsyMDIzLTAxLTIwOzA5OjUwOjEyIEFNOzMwNTk="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxODsyMDIyMjNNQVlDMDA1ODsyMDIzLTAxLTIwOzEwOjU3OjA0IEFNOzQ7MzE3MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="5"/>
+            <declare name="i, j, b" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Enter the value of array&quot;" newline="True"/>
+                <input variable="a[i]"/>
+            </for>
+            <declare name="m" type="String" array="False" size=""/>
+            <output expression="&quot;Enter as if you want to sort in ascending order and enter ds if you want to sort in descending order&quot;" newline="True"/>
+            <input variable="m"/>
+            <if expression="m=&quot;as&quot;">
+                <then>
+                    <for variable="i" start="0" end="4" direction="inc" step="1">
+                        <for variable="j" start="i" end="3" direction="inc" step="1">
+                            <if expression="a[i]&gt;a[j+1]">
+                                <then>
+                                    <assign variable="b" expression="a[i]"/>
+                                    <assign variable="a[i]" expression="a[j+1]"/>
+                                    <assign variable="a[j+1]" expression="b"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                    </for>
+                </then>
+                <else>
+                    <for variable="i" start="0" end="4" direction="inc" step="1">
+                        <for variable="j" start="i" end="3" direction="inc" step="1">
+                            <if expression="a[i]&lt;a[j+1]">
+                                <then>
+                                    <assign variable="b" expression="a[i]"/>
+                                    <assign variable="a[i]" expression="a[j+1]"/>
+                                    <assign variable="a[j+1]" expression="b"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                    </for>
+                </else>
+            </if>
+            <output expression="&quot;Sorted array is &quot;" newline="True"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="a[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22018"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:26:06 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxODsyMDIyMjNNQVlDMDA1ODsyMDIzLTAxLTIwOzEwOjE2OjI0IEFNOzMwNTY="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxODsyMDIyMjNNQVlDMDA1ODsyMDIzLTAxLTIwOzEwOjI2OjA2IEFNOzE7MzE2NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, j" type="Integer" array="False" size=""/>
+            <declare name="a" type="Integer" array="True" size="5"/>
+            <assign variable="a[0]" expression="200"/>
+            <assign variable="a[1]" expression="33"/>
+            <assign variable="a[2]" expression="56"/>
+            <assign variable="a[3]" expression="37"/>
+            <assign variable="a[4]" expression="58"/>
+            <output expression="&quot;Enter the number to be searched: &quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="j" expression="0"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <if expression="n=a[i]">
+                    <then>
+                        <assign variable="j" expression="1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="j=1">
+                <then>
+                    <output expression="n &amp;&quot; is present in the array&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="n &amp;&quot;is not present in the array&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
